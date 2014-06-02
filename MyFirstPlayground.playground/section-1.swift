@@ -63,3 +63,48 @@ switch vegetable {
         let vegetableComment = "Oh, we don't know what it is :("
 }
 
+// ======= FUNCTIONS =======
+
+//Function taking arguments and returning a string
+func greet(name: String, timeOfDay: String) -> String {
+    return "Good \(timeOfDay), \(name)"
+}
+
+// Call the function
+greet("Kiran", "Evening")
+
+// Check out multiple return values
+func multipleReturnValue() -> (Double, Double, Double) {
+    return(2.225, 5.374, 6.3245)
+}
+
+multipleReturnValue()
+
+// take unlimited number of parameters
+func addIntegers(numbers :Int...) -> Int {
+    var sum :Int = 0
+    
+    for num in numbers {
+        sum += num
+    }
+    
+    return sum
+}
+
+addIntegers(2, 25, 65)
+
+
+func returnTwenty() -> Int {
+    var initialValue = 25
+    
+    func sub() {
+        initialValue -= 5
+    }
+    
+    sub()
+
+    return initialValue
+}
+
+
+returnTwenty()
