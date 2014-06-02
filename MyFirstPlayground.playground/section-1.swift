@@ -49,3 +49,17 @@ if let name = optionalUsername {
 } else {
     var greeting = "Hey! I don't believe we've met!"
 }
+
+let vegetable = "carrot"
+
+switch vegetable {
+    case "celery":
+        let vegetableComment = "Crunchy!"
+    case "carrot":
+        let vegetableComment = "Orange!"
+    case let x where x.hasSuffix("t"):
+        let vegetableComment = "It ends in 't'"
+    default:
+        let vegetableComment = "Oh, we don't know what it is :("
+}
+
